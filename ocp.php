@@ -32,19 +32,29 @@ $soh = new SomeObjectsHandler();
 $soh->handleObjects($objects);
 */
 
-class SomeObject {
+class SomeObject
+{
     protected $name;
-    public function __construct(string $name) { }
-    public function getObjectName() { }
+
+    public function __construct(string $name)
+    {
+    }
+
+    public function getObjectName()
+    {
+    }
 }
 
-class SomeObjectsHandler {
+class SomeObjectsHandler
+{
 
-    public function __construct() { }
+    public function __construct()
+    {
+    }
 
     public function handleObjects(array $objects): array
     {
-        return array_map(function($object) {
+        return array_map(function ($object) {
             return "handle_{$object->getObjectName()}";
         }, $objects);
     }

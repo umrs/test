@@ -1,11 +1,11 @@
 <?php
 $array = [
     ['id' => 1, 'create' => "14.04.2023", 'title' => "array1"],
-	['id' => 4, 'create' => "09.02.2023", 'title' => "array4"],
-  	['id' => 2, 'create' => "03.07.2023", 'title' => "array2"],
+    ['id' => 4, 'create' => "09.02.2023", 'title' => "array4"],
+    ['id' => 2, 'create' => "03.07.2023", 'title' => "array2"],
     ['id' => 1, 'create' => "22.04.2023", 'title' => "array1"],
-  	['id' => 2, 'create' => "12.12.2023", 'title' => "array4"],
-  	['id' => 3, 'create' => "04.04.2023", 'title' => "array3"]
+    ['id' => 2, 'create' => "12.12.2023", 'title' => "array4"],
+    ['id' => 3, 'create' => "04.04.2023", 'title' => "array3"]
 ];
 
 
@@ -14,8 +14,8 @@ $array = [
 Создайте новый массив, который содержит только уникальные записи из исходного массива (без дубликатов id). В результирующем массиве каждый id должен встречаться только один раз.
 */
 
-$result = array_map(function($item) {
-    static $ids =  [];
+$result = array_map(function ($item) {
+    static $ids = [];
 
     $id = $item['id'];
     if (!isset($ids[$id])) {

@@ -19,12 +19,15 @@ class Http {
  */
 
 
-interface HttpInterface {
+interface HttpInterface
+{
     public function get(string $url, array $options);
+
     public function post(string $url, array $options);
 }
 
-class Http implements HttpInterface {
+class Http implements HttpInterface
+{
     private $service;
 
     public function __construct($service)
@@ -36,12 +39,14 @@ class Http implements HttpInterface {
     {
         $this->service->request($url, 'GET', $options);
     }
+
     public function post(string $url, array $options)
     {
         $this->service->request($url, 'POST', $options);
     }
 }
 
-class XMLHttpService extends Http {
+class XMLHttpService extends Http
+{
 
 }
